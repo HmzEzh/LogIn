@@ -12,7 +12,7 @@ Path path_0 = Path();
     path_0.close();
     canvas.drawShadow(path_0, Color(0x000000).withOpacity(1.0),5, false);
 Paint paint_0_fill = Paint()..style=PaintingStyle.fill;
-paint_0_fill.color = Color(0x023C8D).withOpacity(1.0);
+paint_0_fill.color = Color.fromARGB(255, 2, 60, 141);
 canvas.drawPath(path_0,paint_0_fill);
 }
 @override
