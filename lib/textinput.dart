@@ -9,7 +9,7 @@ class MyCustomForm extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
         Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 16),
+          padding: const EdgeInsets.symmetric(vertical: 10),
           child: TextFormField(
             decoration: const InputDecoration(
               border: UnderlineInputBorder(),
@@ -17,6 +17,16 @@ class MyCustomForm extends StatelessWidget {
             ),
           ),
         ),
+        Padding(
+          padding: const EdgeInsets.symmetric(vertical: 10),
+          child: TextFormField(
+            decoration: const InputDecoration(
+              border: UnderlineInputBorder(),
+              labelText: 'Password',
+            ),
+          ),
+        )
+        
       ],
     );
   }

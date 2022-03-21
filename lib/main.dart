@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:loginpage/cor.dart';
 import 'textinput.dart';
 import 'dart:ui';
+import 'button.dart';
 void main(List<String> args) {
   runApp(MaterialApp(
     home: homme()
@@ -20,8 +20,9 @@ class homme extends StatelessWidget {
     return MaterialApp(
     home:
     Scaffold(
-      body :Container(
-      child:Column(children: [
+      body :
+     SingleChildScrollView( child:Container(
+      child:Column(children:[
         new Stack (children: <Widget> [
         CustomPaint(
     size: Size(x.width,x.height/2.3), //You can Replace [WIDTH] with your desired width for Custom Paint and height will be calculated automatically
@@ -43,7 +44,8 @@ class homme extends StatelessWidget {
        ),
      )]
       ),
-      Column(children: [
+      Column(
+        children: [
         Container (
           width: 100,
           padding:  EdgeInsets.only(bottom: 8),
@@ -57,12 +59,41 @@ class homme extends StatelessWidget {
            color: Color.fromARGB(255, 2, 60, 141),
            ),
            )),
-           Container(child:MyCustomForm())
-        
-      ],
+           Container(
+             width: 300,
+             child:
+               MyCustomForm(),
+               ),
+               Container(
+                 width: 300,
+                 padding: EdgeInsets.only(top: 15),
+                 child:
+               Text("Forgot password ?",
+           textAlign: TextAlign.right,
+           style: TextStyle(fontSize: 18,
+           fontWeight: FontWeight.bold,
+           color: Color.fromARGB(255, 2, 60, 141),
+           ),
+           )),
+           Container(
+             alignment: AlignmentDirectional.center,
+             width: 300,
+             child: Buttom(),
+           ),
+          Container(
+            padding: EdgeInsets.only(top: 15),
+             child: Text("Copyright E.F.K. 2022",
+           textAlign: TextAlign.center,
+           style: TextStyle(color: Color.fromARGB(255, 112, 112, 112),
+           ),
+           )),
+               
+             ]),
+             
+      ]
 
-      )
-      ],))));
+      
+     )))));
   }
 }
 //Copy this CustomPainter code to the Bottom of the File
